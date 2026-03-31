@@ -1,21 +1,21 @@
-# --- System Files (OS junk files) ---
+# Dependency directories
+node_modules/
+
+# Prepros cache
+.prepros-6/
+prepros-6.config
+*.log
+
+# OS generated files
 .DS_Store
 Thumbs.db
 
-# --- Editor/IDE Settings ---
-.vscode/
-.idea/
+# Build/Dist folders 
+dist/
+build/
 
-# --- Prepros & Sass Cache ---
-# Since you have prepros-6.config
-.sass-cache/
-*.css.map
-*.js.map
+# CSS/JS Maps
+*.map
 
-# --- Sensitive Files (IMPORTANT) ---
-# If config.js contains API Keys or Passwords, uncomment the line below:
+# Sensitive Files 
 # config.js
-
-# --- Node Modules (If you use npm install in the future) ---
-node_modules/
-package-lock.json
