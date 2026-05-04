@@ -27,10 +27,6 @@
 
 
 	<style>
-		/*======================================
-//--//-->   ABOUT
-======================================*/
-
 		.about-mf .box-shadow-full {
 			padding-top: 4rem;
 			padding-bottom: 4rem;
@@ -51,7 +47,7 @@
 
 
 		.skill-mf .progress {
-			/* background-color: #cde1f8; */
+
 			margin: .5rem 0 1.2rem 0;
 			border-radius: 0;
 			height: .7rem;
@@ -63,7 +59,7 @@
 		}
 
 
-		/* Animation styles */
+
 		#typing-animation {
 			position: relative;
 			font-size: 30px;
@@ -76,7 +72,6 @@
 
 		#typing-animation:before {
 			content: "";
-			/* position: absolute; */
 			top: 0;
 			left: 0;
 			width: 0;
@@ -106,7 +101,7 @@
 		}
 
 
-		/* project image zoom effect */
+
 
 		.zoom-effect {
 			overflow: hidden;
@@ -121,7 +116,7 @@
 
 </head>
 <script src="config.js"></script>
-<script src="js/main.js"></script> ```
+<script src="js/main.js"></script>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
@@ -161,7 +156,7 @@
 								<span class="subheading">Hello!</span>
 								<h1 class="mb-4 mt-3">I'm <span>Rishabh Dhar Dwivedi</span></h1>
 
-								<!-- Element to contain animated typing -->
+
 								<span id="typing-animation"></span>
 
 								<script>
@@ -178,11 +173,11 @@
 
 									// Create a function to display the typing animation for a given text
 									function playTypingAnimation(text) {
-										// Loop through each character and add it to the element
+
 										for (let i = 0; i < text.length; i++) {
 											setTimeout(() => {
 												typingAnimationElement.textContent += text[i];
-											}, i * 200); // Increase the delay to slow down the typing animation
+											}, i * 200);
 										}
 
 										// Once the animation is complete, reset the text and start over
@@ -200,8 +195,7 @@
 								<br>
 								<br>
 								<h2>BCA Student | Passoinate About Technology</h2>
-								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-								<!-- <br> -->
+
 								<p><a href="https://github.com/rishabh-dwivedi22/rishabh-dwivedi22"
 										class="btn btn-primary py-3 px-4">GitHub</a>
 									<a href="https://github.com/rishabh-dwivedi22/rishabh-dwivedi22"
@@ -221,7 +215,6 @@
 		<div class="container">
 			<div class="row">
 				<div class="row d-flex align-items-stretch">
-					<!-- <div class="row d-flex"> -->
 					<div class="col-md-6 col-lg-5 d-flex">
 						<div class="img-about img d-flex align-items-stretch">
 							<div class="overlay">
@@ -231,7 +224,6 @@
 											<img src="images/about-me.jpeg" class="img-fluid rounded b-shadow-a" alt="">
 										</div>
 									</div>
-									<!-- Details next to profile image -->
 									<div class="col-sm-6 col-md-7">
 										<div class="about-info">
 											<p><span class="title-s">Name: </span> <span>Rishabh Dhar Dwivedi</span></p>
@@ -442,12 +434,65 @@
 				</div>
 			</div>
 
-			<div class="row justify-content-center mt-5">
-				<div class="col-md-6 text-center ftco-animate">
-
-				</div>
+			<!-- ACHIEVEMENTS & CERTIFICATIONS SECTION -->
+			<br>
+			<br>
+			<div class="row">
+				<h1 class="big-4">Achievements & Certifications</h1>
+				<div class="underline"></div>
 			</div>
-		</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Feb 2026</span>
+						<h2>VIVEKA: The Intelligence 5.0 (Techfest 2k26)</h2>
+						<span class="position">Shri Ramswaroop Memorial University (SRMU)</span>
+						<p class="mt-4">
+							Participated in key technical events at SRMU's Techfest, showcasing skills in software
+							development, algorithm design, and cybersecurity concepts.
+						</p>
+						<ul>
+							<li><strong>Hackathon:</strong> Completed the intensive multi-day event, developing a
+								software solution prototype.</li>
+							<li><strong>CodeX Competition:</strong> Participated in the competitive programming
+								challenge to test logical and algorithmic skills.</li>
+							<li><strong>Cybersecurity Workshop ("Hack with Smile"):</strong> Attended the workshop to
+								gain knowledge about core cybersecurity concepts and practical techniques.</li>
+						</ul>
+
+
+						<div class="row mt-4 justify-content-center">
+							<div class="col-md-4 mb-4 d-flex justify-content-center align-items-center">
+								<a href="images/hackathon.jpeg" target="_blank" title="Click to view full size">
+									<img src="images/hackathon.jpeg" class="img-fluid zoom-effect"
+										alt="Hackathon Certificate"
+										style="border: 2px solid #ffbd39; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.2); width: 100%;">
+								</a>
+							</div>
+							<div class="col-md-4 mb-4 d-flex justify-content-center align-items-center">
+								<a href="images/Codex.jpeg" target="_blank" title="Click to view full size">
+									<img src="images/Codex.jpeg" class="img-fluid zoom-effect"
+										alt="Codex Competition Certificate"
+										style="border: 2px solid #ffbd39; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.2); width: 100%;">
+								</a>
+							</div>
+							<div class="col-md-4 mb-4 d-flex justify-content-center align-items-center">
+								<a href="images/Cyber.jpeg" target="_blank" title="Click to view full size">
+									<img src="images/Cyber.jpeg" class="img-fluid zoom-effect"
+										alt="Cybersecurity Workshop Certificate"
+										style="border: 2px solid #ffbd39; border-radius: 5px; box-shadow: 2px 2px 5px rgba(0,0,0,0.2); width: 100%;">
+								</a>
+							</div>
+						</div>
+
+						<div class="row justify-content-center mt-5">
+							<div class="col-md-6 text-center ftco-animate">
+
+							</div>
+						</div>
+					</div>
 	</section>
 
 
@@ -491,7 +536,7 @@
 				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
 					<div class="block-18">
 						<div class="text">
-							<strong class="number" data-number="9">0</strong>
+							<strong class="number" data-number="12">0</strong>
 							<span>GitHub Repos</span>
 						</div>
 					</div>
@@ -499,7 +544,7 @@
 				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
 					<div class="block-18">
 						<div class="text">
-							<strong class="number" data-number="250">0</strong>
+							<strong class="number" data-number="300">0</strong>
 							<span>Learning Hours</span>
 						</div>
 					</div>
@@ -508,7 +553,6 @@
 		</div>
 
 		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
 			<div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
 					<h2>More projects on<span> Github </span> </h2>
@@ -520,7 +564,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- </div> -->
 		</div>
 	</section>
 
