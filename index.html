@@ -111,6 +111,152 @@
 		.zoom-effect:hover {
 			transform: scale(1.1);
 		}
+
+		/* Floating WhatsApp Widget */
+		.wa-float-container {
+			position: fixed;
+			bottom: 30px;
+			right: 30px;
+			z-index: 99999;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		.wa-chat-bubble {
+			background: #ffffff;
+			color: #222222;
+			padding: 12px 16px;
+			border-radius: 14px;
+			box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+			margin-bottom: 12px;
+			max-width: 260px;
+			position: relative;
+			cursor: pointer;
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(15px);
+			transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		}
+
+		.wa-chat-bubble.show {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+
+		.wa-chat-bubble::after {
+			content: '';
+			position: absolute;
+			bottom: -8px;
+			right: 25px;
+			border-width: 8px 8px 0;
+			border-style: solid;
+			border-color: #ffffff transparent;
+		}
+
+		.wa-bubble-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 4px;
+		}
+
+		.wa-bubble-name {
+			font-weight: 700;
+			color: #075e54;
+			font-size: 13px;
+			letter-spacing: 0.3px;
+		}
+
+		.wa-close-btn {
+			background: none;
+			border: none;
+			font-size: 18px;
+			line-height: 1;
+			color: #999999;
+			cursor: pointer;
+			padding: 0 0 0 8px;
+		}
+
+		.wa-close-btn:hover {
+			color: #e53935;
+		}
+
+		.wa-bubble-text {
+			margin: 0;
+			color: #444444;
+			line-height: 1.4;
+			font-size: 12px;
+		}
+
+		.wa-btn {
+			width: 60px;
+			height: 60px;
+			background: #25d366;
+			color: #ffffff !important;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: 0 8px 24px rgba(37, 211, 102, 0.55);
+			text-decoration: none;
+			position: relative;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.wa-btn:hover {
+			transform: scale(1.1);
+			box-shadow: 0 12px 28px rgba(37, 211, 102, 0.75);
+			color: #ffffff;
+		}
+
+		.wa-btn svg {
+			width: 34px;
+			height: 34px;
+			fill: #ffffff;
+		}
+
+		.wa-pulse {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background-color: #25d366;
+			opacity: 0.7;
+			animation: wa-pulse-effect 2s infinite;
+			z-index: -1;
+		}
+
+		@keyframes wa-pulse-effect {
+			0% {
+				transform: scale(1);
+				opacity: 0.7;
+			}
+			100% {
+				transform: scale(1.65);
+				opacity: 0;
+			}
+		}
+
+		@media (max-width: 576px) {
+			.wa-float-container {
+				bottom: 20px;
+				right: 20px;
+			}
+			.wa-btn {
+				width: 52px;
+				height: 52px;
+			}
+			.wa-btn svg {
+				width: 28px;
+				height: 28px;
+			}
+			.wa-chat-bubble {
+				max-width: 230px;
+			}
+		}
 	</style>
 
 
@@ -628,6 +774,7 @@
 									class="icon-github"></span></a></li>
 						<li class="ftco-animate"><a href="http://www.linkedin.com/in/rishabh--dhar-dwivedi22"><span
 									class="icon-linkedin"></span></a></li>
+						<li class="ftco-animate"><a href="https://wa.me/918470977210?text=Hi%20Rishabh!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you." target="_blank" title="WhatsApp"><span class="icon-whatsapp"></span></a></li>
 
 
 					</ul>
@@ -660,6 +807,26 @@
 
 	<script src="js/main.js"></script>
 
+
+	<!-- Floating WhatsApp Chat Widget -->
+	<div class="wa-float-container">
+		<div class="wa-chat-bubble" id="waChatBubble">
+			<div class="wa-bubble-header">
+				<span class="wa-bubble-name">Rishabh Dhar Dwivedi</span>
+				<button class="wa-close-btn" id="waCloseBubble" title="Close">&times;</button>
+			</div>
+			<p class="wa-bubble-text">Hi there! 👋 Have a project or question? Chat with me on WhatsApp!</p>
+		</div>
+		<a href="https://wa.me/918470977210?text=Hi%20Rishabh!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you."
+			class="wa-btn" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" id="waButton">
+			<div class="wa-pulse"></div>
+			<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+				<path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.136-2.135c2.361 1.314 5.044 2.012 7.864 2.012 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.284c-2.433 0-4.817-0.655-6.903-1.894l-0.495-0.294-5.132 1.346 1.37-5.002-0.323-0.514c-1.362-2.167-2.081-4.688-2.081-7.276 0-7.327 5.957-13.284 13.284-13.284s13.284 5.957 13.284 13.284c0 7.327-5.957 13.284-13.284 13.284zM22.428 19.387c-0.352-0.176-2.083-1.028-2.406-1.145s-0.558-0.176-0.793 0.176c-0.235 0.352-0.91 1.145-1.116 1.38s-0.411 0.264-0.763 0.088c-0.352-0.176-1.488-0.548-2.834-1.748-1.047-0.933-1.754-2.086-1.959-2.438s-0.022-0.543 0.154-0.718c0.158-0.158 0.352-0.411 0.528-0.616s0.235-0.352 0.352-0.587c0.117-0.235 0.059-0.44-0.029-0.616s-0.793-1.91-1.086-2.614c-0.286-0.686-0.576-0.593-0.793-0.604-0.205-0.010-0.44-0.012-0.675-0.012s-0.616 0.088-0.939 0.44c-0.323 0.352-1.233 1.204-1.233 2.937s1.262 3.407 1.438 3.642c0.176 0.235 2.484 3.793 6.018 5.319 0.84 0.363 1.496 0.58 2.007 0.742 0.844 0.268 1.612 0.23 2.22 0.139 0.678-0.101 2.083-0.852 2.376-1.674 0.294-0.822 0.294-1.527 0.205-1.674s-0.323-0.235-0.675-0.411z"/>
+			</svg>
+		</a>
+	</div>
+
+	<script src="js/whatsapp-widget.js"></script>
 </body>
 
 </html>
