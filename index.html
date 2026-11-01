@@ -276,12 +276,208 @@
 				font-size: 13px;
 			}
 		}
+
+		/* ========================================================= */
+		/* MOBILE RESPONSIVE OPTIMIZATIONS (PC vs MOBILE ADAPTATION) */
+		/* ========================================================= */
+		html, body {
+			overflow-x: hidden !important;
+			width: 100% !important;
+			max-width: 100vw !important;
+			margin: 0;
+			padding: 0;
+			position: relative;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		@media (max-width: 991.98px) {
+			.ftco-navbar-light {
+				background: #000000 !important;
+				position: relative;
+				top: 0;
+				padding: 12px 15px;
+			}
+			.navbar-brand {
+				font-size: 18px !important;
+			}
+		}
+
+		@media (max-width: 767.98px) {
+			/* Section Padding on Mobile */
+			.ftco-section {
+				padding: 3.5rem 0 !important;
+			}
+
+			/* Hide huge background decorative text on mobile to prevent horizontal viewport stretch */
+			.heading-section h1.big {
+				display: none !important;
+			}
+
+			/* Headings on Mobile */
+			.heading-section h2 {
+				font-size: 26px !important;
+				line-height: 1.3 !important;
+				margin-bottom: 1rem !important;
+			}
+
+			.heading-section p {
+				font-size: 14px !important;
+				line-height: 1.6 !important;
+			}
+
+			/* Hero / Banner Section on Mobile */
+			.hero, .home-slider, .slider-item {
+				min-height: 80vh !important;
+				height: auto !important;
+				padding: 40px 0 !important;
+			}
+
+			.slider-text {
+				text-align: left;
+			}
+
+			.slider-text .subheading {
+				font-size: 14px !important;
+				letter-spacing: 2px !important;
+				margin-bottom: 8px !important;
+			}
+
+			.slider-text h1 {
+				font-size: 28px !important;
+				line-height: 1.25 !important;
+				margin-bottom: 12px !important;
+			}
+
+			#typing-animation {
+				font-size: 18px !important;
+				white-space: normal !important;
+				display: inline-block;
+				margin-bottom: 8px;
+			}
+
+			.slider-text h2 {
+				font-size: 15px !important;
+				line-height: 1.4 !important;
+				margin-top: 10px !important;
+				margin-bottom: 20px !important;
+			}
+
+			.slider-text .btn {
+				padding: 10px 18px !important;
+				font-size: 13px !important;
+				margin-right: 8px !important;
+				margin-bottom: 8px !important;
+			}
+
+			/* About Section on Mobile */
+			.ftco-about .img-about {
+				margin-bottom: 25px;
+			}
+
+			.about-img {
+				text-align: center;
+				margin-bottom: 15px !important;
+			}
+
+			.about-img img {
+				max-width: 140px !important;
+				display: inline-block;
+				margin: 0 auto;
+			}
+
+			.about-info p {
+				font-size: 13.5px !important;
+				margin-bottom: 8px !important;
+			}
+
+			.ftco-about ul.about-info {
+				padding: 0 !important;
+			}
+
+			.ftco-about ul.about-info li {
+				flex-direction: column !important;
+				align-items: flex-start !important;
+				margin-bottom: 12px !important;
+			}
+
+			.ftco-about ul.about-info li span:first-child {
+				width: 100% !important;
+				font-size: 13px !important;
+				color: #00e5ff !important;
+			}
+
+			.ftco-about ul.about-info li span {
+				width: 100% !important;
+				font-size: 13.5px !important;
+			}
+
+			/* Skills Progress Bar on Mobile */
+			.skill-mf .title-s {
+				font-size: 16px !important;
+			}
+
+			.skill-mf span {
+				font-size: 12px !important;
+			}
+
+			.skill-mf .progress {
+				height: 6px !important;
+				margin-bottom: 1rem !important;
+			}
+
+			.skill-mf .progress .progress-bar {
+				height: 6px !important;
+			}
+
+			/* Resume Wraps on Mobile */
+			.resume-wrap {
+				padding: 20px 15px !important;
+				margin-bottom: 20px !important;
+			}
+
+			.resume-wrap h2 {
+				font-size: 18px !important;
+				line-height: 1.3 !important;
+			}
+
+			.resume-wrap .position {
+				font-size: 13px !important;
+			}
+
+			.resume-wrap p, .resume-wrap ul li {
+				font-size: 13px !important;
+				line-height: 1.5 !important;
+			}
+
+			/* Contact Cards on Mobile */
+			.contact-info .box {
+				padding: 20px 15px !important;
+				margin-bottom: 15px !important;
+			}
+
+			.contact-info .box h3 {
+				font-size: 16px !important;
+				margin-bottom: 8px !important;
+			}
+
+			.contact-info .box p {
+				font-size: 13.5px !important;
+				word-break: break-word;
+			}
+		}
 	</style>
 
 
 </head>
 <script src="config.js"></script>
-<script src="js/main.js"></script>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
@@ -657,6 +853,9 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
 
@@ -674,7 +873,6 @@
 
 				</div>
 			</div>
-		</div>
 		</div>
 	</section>
 
@@ -781,38 +979,31 @@
 					</div>
 				</div>
 
-				<div class="container">
-					<br>
-					<br>
-					<div class="row justify-content-center">
-						<div class="col-md-7 ftco-animate text-center">
-							<h2>Have a<span> Question? </span> <a href="https://forms.gle/6MZnYkY4AyU56PtU6"
-									class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-						</div>
-					</div>
-					<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-						<li class="ftco-animate normal-txt">Find me on </li>
-						<li class="ftco-animate"><a href="https://github.com/rishabh-dwivedi22/rishabh-dwivedi22"><span
-									class="icon-github"></span></a></li>
-						<li class="ftco-animate"><a href="http://www.linkedin.com/in/rishabh--dhar-dwivedi22"><span
-									class="icon-linkedin"></span></a></li>
-						<li class="ftco-animate"><a href="https://wa.me/918470977210?text=Hi%20Rishabh!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you." target="_blank" title="WhatsApp"><span class="icon-whatsapp"></span></a></li>
+			</div>
 
-
-					</ul>
-					<br>
+			<div class="row justify-content-center mt-4">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question? </span> <a href="https://forms.gle/6MZnYkY4AyU56PtU6"
+							class="btn btn-primary py-3 px-5">Click Here</a> </h2>
 				</div>
 			</div>
+			<div class="row justify-content-center mt-3">
+				<div class="col-md-7 text-center">
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate normal-txt">Find me on </li>
+						<li class="ftco-animate"><a href="https://github.com/rishabh-dwivedi22/rishabh-dwivedi22" target="_blank"><span
+									class="icon-github"></span></a></li>
+						<li class="ftco-animate"><a href="http://www.linkedin.com/in/rishabh--dhar-dwivedi22" target="_blank"><span
+									class="icon-linkedin"></span></a></li>
+						<li class="ftco-animate"><a href="https://wa.me/918470977210?text=Hi%20Rishabh!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you." target="_blank" title="WhatsApp"><span class="icon-whatsapp"></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</section>
 
 
-	<!-- loader -->
-	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-				stroke="#F96D00" />
-		</svg></div>
+	<!-- loader disabled for instant rendering -->
 
 
 	<script src="js/jquery.min.js"></script>

@@ -115,3 +115,29 @@ I am always open to discussing new opportunities, collaborations, or tech projec
 <div align="center">
   <sub>Designed & Maintained with ❤️ by <strong>Rishabh Dhar Dwivedi</strong></sub>
 </div>
+
+2. **Navigate to the project folder:**
+   ```bash
+   cd my-portfolio
+   ```
+
+3. **Launch the website:**
+   - Double-click `index.html` to open it in any web browser.
+   - *OR* use VS Code's **Live Server** extension for real-time live preview.
+
+---
+
+## 📬 Connect With Me
+
+I am always open to discussing new opportunities, collaborations, or tech projects!
+
+- **LinkedIn:** [linkedin.com/in/rishabh--dhar-dwivedi22](https://www.linkedin.com/in/rishabh--dhar-dwivedi22/)
+-  **GitHub:** [github.com/rishabh-dwivedi22](https://github.com/rishabh-dwivedi22)
+-  **WhatsApp:** [+91 8470977210](https://wa.me/918470977210?text=Hi%20Rishabh!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you.)
+- 📧 **Email:** [dwivedirishabh72@gmail.com](mailto:dwivedirishabh72@gmail.com)
+
+---
+
+<div align="center">
+  <sub>Designed & Maintained with ❤️ by <strong>Rishabh Dhar Dwivedi</strong></sub>
+</div>
