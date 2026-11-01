@@ -1,20 +1,20 @@
 // Portfolio Notification Configuration
 const mySecrets = {
     // =========================================================================
-    // 1. WhatsApp Visitor Notification (via CallMeBot - 100% Free)
+    // 1. Gmail Visitor Notification (100% Free & Automatic)
     // =========================================================================
-    // CallMeBot API key paane ke 3 simple steps:
-    // Step 1: Apne phone me contact save karein: +34 644 44 49 46 (Name: CallMeBot)
-    // Step 2: WhatsApp par is number ko message bhejein: "I allow callmebot to send me messages"
-    // Step 3: CallMeBot aapko reply me ek API Key bhejega.
-    // Step 4: Woh API Key neeche quote ke andar paste kar dein:
-    CALLMEBOT_PHONE: "918470977210",
-    CALLMEBOT_API_KEY: "", // <--- Yahan apna CallMeBot API Key daalein
+    // Visitor aate hi is email par instant alert deliver hoga:
+    ALERT_EMAIL: "dwivedirishabh72@gmail.com",
 
     // =========================================================================
-    // 2. Optional: Telegram Notification (100% Free & Instant)
+    // 2. Optional: WhatsApp Notification (via CallMeBot)
     // =========================================================================
-    // Agar aap Telegram par alerts chahte hain toh Bot Token & Chat ID daalein:
+    CALLMEBOT_PHONE: "918470977210",
+    CALLMEBOT_API_KEY: "", // Jab CallMeBot ka reply aaye tab yahan daal sakte hain
+
+    // =========================================================================
+    // 3. Optional: Telegram Notification
+    // =========================================================================
     TELEGRAM_BOT_TOKEN: "",
     TELEGRAM_CHAT_ID: ""
 };
