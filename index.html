@@ -62,42 +62,29 @@
 
 
 		#typing-animation {
-			position: relative;
 			font-size: 30px;
 			font-weight: bold;
 			color: rgb(255, 255, 255);
-			overflow: hidden;
-			white-space: nowrap;
-			animation: typing 3s steps(20, end) infinite;
+			display: inline-block;
+			vertical-align: middle;
 		}
 
-		#typing-animation:before {
-			content: "";
-			top: 0;
-			left: 0;
-			width: 0;
-			height: 100%;
-			background-color: #ccc;
-			animation: typing-cursor 0.5s ease-in-out infinite;
+		.typed-cursor {
+			font-size: 30px;
+			font-weight: 300;
+			color: #ffbd39;
+			animation: typedCursorBlink 0.7s infinite;
+			margin-left: 2px;
+			display: inline-block;
+			vertical-align: middle;
 		}
 
-		@keyframes typing {
-			from {
-				width: 0;
+		@keyframes typedCursorBlink {
+			0%, 100% {
+				opacity: 1;
 			}
-
-			to {
-				width: 100%;
-			}
-		}
-
-		@keyframes typing-cursor {
-			from {
-				width: 5px;
-			}
-
-			to {
-				width: 0;
+			50% {
+				opacity: 0;
 			}
 		}
 
@@ -413,10 +400,14 @@
 			}
 
 			#typing-animation {
-				font-size: 17px !important;
+				font-size: 18px !important;
 				white-space: normal !important;
 				display: inline-block;
 				margin-bottom: 8px;
+			}
+
+			.typed-cursor {
+				font-size: 18px !important;
 			}
 
 			.slider-text h2 {
@@ -579,38 +570,54 @@
 								<h1 class="mb-4 mt-3">I'm <span>Rishabh Dhar Dwivedi</span></h1>
 
 
-								<span id="typing-animation"></span>
+								<span id="typing-animation"></span><span class="typed-cursor">|</span>
 
 								<script>
 
 									// Initialize the typing animation
 									const typingAnimationElement = document.getElementById('typing-animation');
 
-									// Create an array of typing text
+									// Titles to type out smoothly
 									const typingTexts = [
-										' Data Analyst ',
-										' App Developer ',
-										'Frontend Developer  ',
+										'Data Analyst',
+										'App Developer',
+										'Frontend Developer'
 									];
 
-									// Create a function to display the typing animation for a given text
-									function playTypingAnimation(text) {
+									let textIdx = 0;
+									let charIdx = 0;
+									let isDeleting = false;
 
-										for (let i = 0; i < text.length; i++) {
-											setTimeout(() => {
-												typingAnimationElement.textContent += text[i];
-											}, i * 200);
+									function typeEffect() {
+										const currentText = typingTexts[textIdx];
+
+										if (isDeleting) {
+											typingAnimationElement.textContent = currentText.substring(0, charIdx - 1);
+											charIdx--;
+										} else {
+											typingAnimationElement.textContent = currentText.substring(0, charIdx + 1);
+											charIdx++;
 										}
 
-										// Once the animation is complete, reset the text and start over
-										setTimeout(() => {
-											typingAnimationElement.textContent = '';
-											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-										}, text.length * 200);
+										// Normal, readable typing speed (120ms) and smooth backspacing speed (60ms)
+										let typeSpeed = isDeleting ? 60 : 120;
+
+										if (!isDeleting && charIdx === currentText.length) {
+											// Word fully typed: Pause for 1.8 seconds so visitor can easily read it
+											typeSpeed = 1800;
+											isDeleting = true;
+										} else if (isDeleting && charIdx === 0) {
+											// Word fully erased: Pause 400ms before typing next title
+											isDeleting = false;
+											textIdx = (textIdx + 1) % typingTexts.length;
+											typeSpeed = 400;
+										}
+
+										setTimeout(typeEffect, typeSpeed);
 									}
 
-									// Start the typing animation loop
-									playTypingAnimation(typingTexts[0]);
+									// Start the typewriter loop
+									typeEffect();
 
 								</script>
 
