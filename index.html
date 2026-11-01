@@ -115,8 +115,8 @@
 		/* Floating WhatsApp Widget */
 		.wa-float-container {
 			position: fixed;
-			bottom: 30px;
-			right: 30px;
+			bottom: 24px;
+			right: 24px;
 			z-index: 99999;
 			display: flex;
 			flex-direction: column;
@@ -127,16 +127,16 @@
 		.wa-chat-bubble {
 			background: #ffffff;
 			color: #222222;
-			padding: 12px 16px;
-			border-radius: 14px;
-			box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
-			margin-bottom: 12px;
-			max-width: 260px;
+			padding: 8px 12px;
+			border-radius: 12px;
+			box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+			margin-bottom: 10px;
+			max-width: 210px;
 			position: relative;
 			cursor: pointer;
 			opacity: 0;
 			visibility: hidden;
-			transform: translateY(15px);
+			transform: translateY(12px);
 			transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 		}
 
@@ -149,9 +149,9 @@
 		.wa-chat-bubble::after {
 			content: '';
 			position: absolute;
-			bottom: -8px;
-			right: 25px;
-			border-width: 8px 8px 0;
+			bottom: -7px;
+			right: 18px;
+			border-width: 7px 7px 0;
 			border-style: solid;
 			border-color: #ffffff transparent;
 		}
@@ -160,24 +160,24 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			margin-bottom: 4px;
+			margin-bottom: 2px;
 		}
 
 		.wa-bubble-name {
 			font-weight: 700;
 			color: #075e54;
-			font-size: 13px;
-			letter-spacing: 0.3px;
+			font-size: 11.5px;
+			letter-spacing: 0.2px;
 		}
 
 		.wa-close-btn {
 			background: none;
 			border: none;
-			font-size: 18px;
+			font-size: 15px;
 			line-height: 1;
 			color: #999999;
 			cursor: pointer;
-			padding: 0 0 0 8px;
+			padding: 0 0 0 6px;
 		}
 
 		.wa-close-btn:hover {
@@ -187,34 +187,34 @@
 		.wa-bubble-text {
 			margin: 0;
 			color: #444444;
-			line-height: 1.4;
-			font-size: 12px;
+			line-height: 1.35;
+			font-size: 11px;
 		}
 
 		.wa-btn {
-			width: 60px;
-			height: 60px;
+			width: 48px;
+			height: 48px;
 			background: #25d366;
 			color: #ffffff !important;
 			border-radius: 50%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			box-shadow: 0 8px 24px rgba(37, 211, 102, 0.55);
+			box-shadow: 0 6px 18px rgba(37, 211, 102, 0.5);
 			text-decoration: none;
 			position: relative;
 			transition: transform 0.3s ease, box-shadow 0.3s ease;
 		}
 
 		.wa-btn:hover {
-			transform: scale(1.1);
-			box-shadow: 0 12px 28px rgba(37, 211, 102, 0.75);
+			transform: scale(1.08);
+			box-shadow: 0 8px 22px rgba(37, 211, 102, 0.7);
 			color: #ffffff;
 		}
 
 		.wa-btn svg {
-			width: 34px;
-			height: 34px;
+			width: 26px;
+			height: 26px;
 			fill: #ffffff;
 		}
 
@@ -235,26 +235,44 @@
 				opacity: 0.7;
 			}
 			100% {
-				transform: scale(1.65);
+				transform: scale(1.6);
 				opacity: 0;
 			}
 		}
 
-		@media (max-width: 576px) {
+		@media (max-width: 768px) {
 			.wa-float-container {
-				bottom: 20px;
-				right: 20px;
+				bottom: 16px;
+				right: 16px;
 			}
 			.wa-btn {
-				width: 52px;
-				height: 52px;
+				width: 42px;
+				height: 42px;
 			}
 			.wa-btn svg {
-				width: 28px;
-				height: 28px;
+				width: 22px;
+				height: 22px;
 			}
 			.wa-chat-bubble {
-				max-width: 230px;
+				max-width: 185px;
+				padding: 6px 10px;
+				margin-bottom: 7px;
+				border-radius: 10px;
+			}
+			.wa-chat-bubble::after {
+				right: 14px;
+				bottom: -6px;
+				border-width: 6px 6px 0;
+			}
+			.wa-bubble-name {
+				font-size: 11px;
+			}
+			.wa-bubble-text {
+				font-size: 10px;
+				line-height: 1.25;
+			}
+			.wa-close-btn {
+				font-size: 13px;
 			}
 		}
 	</style>
@@ -815,7 +833,7 @@
 				<span class="wa-bubble-name">Rishabh Dhar Dwivedi</span>
 				<button class="wa-close-btn" id="waCloseBubble" title="Close">&times;</button>
 			</div>
-			<p class="wa-bubble-text">Hi there! 👋 Have a project or question? Chat with me on WhatsApp!</p>
+			<p class="wa-bubble-text">Hi! 👋 Let's connect on WhatsApp.</p>
 		</div>
 		<a href="https://wa.me/918470977210?text=Hi%20Rishabh!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you."
 			class="wa-btn" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" id="waButton">
