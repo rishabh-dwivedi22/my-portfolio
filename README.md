@@ -43,7 +43,7 @@ Welcome to the official repository of my personal portfolio website! This projec
 - **💬 Floating WhatsApp Widget:** Integrated custom quick-connect WhatsApp button with compact prompt bubble.
 - **🔔 Real-time Visitor Alerts:** Automated visitor notification dispatch with geolocation insights.
 - **📊 Interactive Skills & Metrics:** Visual animated progress bars for **Data Analytics**, Python, JavaScript, and Machine Learning.
-- **📜 Verified Credentials & Certificates:** Showcase of Hackathon, Codex Competition, and Cybersecurity Workshop achievements.
+- **📜 Verified Credentials & Certificates:** Verified simulations and awards from **Deloitte** (Data Analytics), **BCG X** (Data for Decision Makers), and SRMU Techfest (Hackathon, CodeX, Cybersecurity).
 - **🎨 Dark & Electric Cyan Theme:** Sleek dark background paired with high-contrast accent colors for maximum readability.
 
 ---
@@ -58,6 +58,17 @@ Welcome to the official repository of my personal portfolio website! This projec
 | **Libraries & FX** | Owl Carousel, AOS (Animate on Scroll), Magnific Popup, Waypoints |
 | **Icons & Typography** | Poppins Font, Ionicons, IcoMoon, Flaticon |
 | **Hosting & CI/CD** | GitHub Pages (Automated Deployment via Actions) |
+
+---
+
+## 🏆 Certifications & Achievements
+
+| Certification / Event | Issuing Organization | Date | Verification / Credential |
+| :--- | :--- | :--- | :--- |
+| **Data Analytics Job Simulation** | **Deloitte** (via Forage) | May 2026 | `Ncxg88rHFw4GHCmv3` |
+| **Introduction to Data for Decision Makers** | **BCG X** (Boston Consulting Group via Forage) | May 2026 | `xddkQj4TeFmBojFXa` |
+| **Hackathon & CodeX Competition** | SRMU (VIVEKA 5.0 Techfest) | Feb 2026 | Technical Achievement |
+| **Cybersecurity Workshop ("Hack with Smile")** | SRMU Techfest | Feb 2026 | Practical Training |
 
 ---
 
