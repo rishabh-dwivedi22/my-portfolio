@@ -278,150 +278,190 @@
 		}
 
 		/* ========================================================= */
-		/* MOBILE RESPONSIVE OPTIMIZATIONS (PC vs MOBILE ADAPTATION) */
+		/* MOBILE & DESKTOP RESPONSIVE ALIGNMENT ENGINE              */
 		/* ========================================================= */
 		html, body {
 			overflow-x: hidden !important;
 			width: 100% !important;
 			max-width: 100vw !important;
-			margin: 0;
-			padding: 0;
+			margin: 0 !important;
+			padding: 0 !important;
 			position: relative;
 		}
 
 		* {
-			box-sizing: border-box;
+			box-sizing: border-box !important;
 		}
 
 		img {
-			max-width: 100%;
+			max-width: 100% !important;
 			height: auto;
 		}
 
-		@media (max-width: 991.98px) {
-			.ftco-navbar-light {
-				background: #000000 !important;
-				position: relative;
-				top: 0;
-				padding: 12px 15px;
-			}
-			.navbar-brand {
-				font-size: 18px !important;
-			}
+		/* Global Section Headings */
+		.big-4 {
+			font-size: 30px !important;
+			font-weight: 700 !important;
+			transform: none !important;
+			margin: 0 0 5px 0 !important;
+			color: #ffffff !important;
+			letter-spacing: 0.5px !important;
+			display: block !important;
+			width: 100% !important;
 		}
 
-		@media (max-width: 767.98px) {
-			/* Section Padding on Mobile */
+		.underline {
+			width: 100% !important;
+			max-width: 100% !important;
+			height: 4px !important;
+			margin-top: 5px !important;
+			margin-bottom: 25px !important;
+		}
+
+		/* About Info List (No text clipping on any screen) */
+		.about-info-list {
+			list-style: none !important;
+			padding: 0 !important;
+			margin: 0 !important;
+			width: 100% !important;
+		}
+
+		.about-info-list li {
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 12px;
+			line-height: 1.5;
+			width: 100%;
+		}
+
+		.about-info-list .info-title {
+			font-weight: 600;
+			color: #00e5ff;
+			width: 140px;
+			flex-shrink: 0;
+			font-size: 14px;
+		}
+
+		.about-info-list .info-val {
+			color: #dddddd;
+			flex: 1 1 200px;
+			min-width: 0;
+			word-break: break-word;
+			overflow-wrap: anywhere;
+			font-size: 14px;
+		}
+
+		/* ========================================================= */
+		/* MOBILE SCREENS (max-width: 768px)                         */
+		/* ========================================================= */
+		@media (max-width: 768px) {
+			/* Section Spacing */
 			.ftco-section {
-				padding: 3.5rem 0 !important;
+				padding: 3rem 0 !important;
 			}
 
-			/* Hide huge background decorative text on mobile to prevent horizontal viewport stretch */
+			.container {
+				padding-left: 16px !important;
+				padding-right: 16px !important;
+			}
+
+			.row {
+				margin-left: -10px !important;
+				margin-right: -10px !important;
+			}
+
+			.col, [class*="col-"] {
+				padding-left: 10px !important;
+				padding-right: 10px !important;
+			}
+
+			/* Remove huge absolute background text on mobile to prevent overflow */
 			.heading-section h1.big {
 				display: none !important;
 			}
 
-			/* Headings on Mobile */
 			.heading-section h2 {
 				font-size: 26px !important;
-				line-height: 1.3 !important;
-				margin-bottom: 1rem !important;
-			}
-
-			.heading-section p {
-				font-size: 14px !important;
-				line-height: 1.6 !important;
-			}
-
-			/* Hero / Banner Section on Mobile */
-			.hero, .home-slider, .slider-item {
-				min-height: 80vh !important;
-				height: auto !important;
-				padding: 40px 0 !important;
-			}
-
-			.slider-text {
-				text-align: left;
-			}
-
-			.slider-text .subheading {
-				font-size: 14px !important;
-				letter-spacing: 2px !important;
-				margin-bottom: 8px !important;
-			}
-
-			.slider-text h1 {
-				font-size: 28px !important;
 				line-height: 1.25 !important;
 				margin-bottom: 12px !important;
 			}
 
+			.heading-section p {
+				font-size: 13.5px !important;
+				line-height: 1.6 !important;
+			}
+
+			/* Section Titles on Mobile (No clipping) */
+			.big-4 {
+				font-size: 20px !important;
+				line-height: 1.3 !important;
+				transform: none !important;
+				word-break: break-word !important;
+			}
+
+			/* Hero / Banner on Mobile */
+			.hero, .home-slider, .slider-item {
+				min-height: 80vh !important;
+				height: auto !important;
+				padding: 30px 0 !important;
+			}
+
+			.slider-text h1 {
+				font-size: 26px !important;
+				line-height: 1.25 !important;
+				margin-bottom: 10px !important;
+			}
+
 			#typing-animation {
-				font-size: 18px !important;
+				font-size: 17px !important;
 				white-space: normal !important;
 				display: inline-block;
 				margin-bottom: 8px;
 			}
 
 			.slider-text h2 {
-				font-size: 15px !important;
+				font-size: 14.5px !important;
 				line-height: 1.4 !important;
-				margin-top: 10px !important;
-				margin-bottom: 20px !important;
-			}
-
-			.slider-text .btn {
-				padding: 10px 18px !important;
-				font-size: 13px !important;
-				margin-right: 8px !important;
-				margin-bottom: 8px !important;
+				margin-top: 8px !important;
+				margin-bottom: 18px !important;
 			}
 
 			/* About Section on Mobile */
-			.ftco-about .img-about {
-				margin-bottom: 25px;
-			}
-
 			.about-img {
-				text-align: center;
+				text-align: center !important;
 				margin-bottom: 15px !important;
 			}
 
 			.about-img img {
-				max-width: 140px !important;
-				display: inline-block;
-				margin: 0 auto;
+				max-width: 130px !important;
+				display: inline-block !important;
+				margin: 0 auto !important;
 			}
 
-			.about-info p {
-				font-size: 13.5px !important;
-				margin-bottom: 8px !important;
+			.about-info-list li {
+				display: block !important;
+				margin-bottom: 14px !important;
 			}
 
-			.ftco-about ul.about-info {
-				padding: 0 !important;
-			}
-
-			.ftco-about ul.about-info li {
-				flex-direction: column !important;
-				align-items: flex-start !important;
-				margin-bottom: 12px !important;
-			}
-
-			.ftco-about ul.about-info li span:first-child {
+			.about-info-list .info-title {
+				display: block !important;
 				width: 100% !important;
+				margin-bottom: 2px !important;
 				font-size: 13px !important;
 				color: #00e5ff !important;
 			}
 
-			.ftco-about ul.about-info li span {
+			.about-info-list .info-val {
+				display: block !important;
 				width: 100% !important;
 				font-size: 13.5px !important;
+				color: #eeeeee !important;
+				padding-left: 2px !important;
 			}
 
 			/* Skills Progress Bar on Mobile */
 			.skill-mf .title-s {
-				font-size: 16px !important;
+				font-size: 15px !important;
 			}
 
 			.skill-mf span {
@@ -433,44 +473,65 @@
 				margin-bottom: 1rem !important;
 			}
 
-			.skill-mf .progress .progress-bar {
-				height: 6px !important;
-			}
-
 			/* Resume Wraps on Mobile */
 			.resume-wrap {
-				padding: 20px 15px !important;
-				margin-bottom: 20px !important;
+				padding: 18px 14px !important;
+				margin-bottom: 18px !important;
+				border-radius: 8px !important;
+				word-break: break-word !important;
 			}
 
 			.resume-wrap h2 {
-				font-size: 18px !important;
-				line-height: 1.3 !important;
+				font-size: 17px !important;
+				line-height: 1.35 !important;
 			}
 
 			.resume-wrap .position {
-				font-size: 13px !important;
+				font-size: 12.5px !important;
 			}
 
-			.resume-wrap p, .resume-wrap ul li {
-				font-size: 13px !important;
-				line-height: 1.5 !important;
+			.resume-wrap ul {
+				padding-left: 18px !important;
 			}
 
-			/* Contact Cards on Mobile */
+			.resume-wrap ul li, .resume-wrap p {
+				font-size: 13px !important;
+				line-height: 1.55 !important;
+			}
+
+			/* Hide WhatsApp popup bubble on mobile so it never blocks text */
+			.wa-chat-bubble {
+				display: none !important;
+			}
+
+			.wa-float-container {
+				bottom: 16px !important;
+				right: 16px !important;
+			}
+
+			.wa-btn {
+				width: 44px !important;
+				height: 44px !important;
+			}
+
+			.wa-btn svg {
+				width: 24px !important;
+				height: 24px !important;
+			}
+
+			/* Contact section on Mobile */
 			.contact-info .box {
-				padding: 20px 15px !important;
-				margin-bottom: 15px !important;
+				padding: 18px 12px !important;
+				margin-bottom: 12px !important;
 			}
 
 			.contact-info .box h3 {
-				font-size: 16px !important;
-				margin-bottom: 8px !important;
+				font-size: 15px !important;
 			}
 
 			.contact-info .box p {
-				font-size: 13.5px !important;
-				word-break: break-word;
+				font-size: 13px !important;
+				word-break: break-word !important;
 			}
 		}
 	</style>
@@ -651,24 +712,14 @@
 									Currently, I am focused on improving my app development skills and building personal
 									projects for practical experience.
 								</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>BCA Student &amp; Aspiring Data Analyst</span>
-									</li>
-									<li class="d-flex"><span>Domain:</span> <span>Data Analytics &amp; App Development
-										</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Bachelor of Computer
-											Applications</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
-									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, VS code, Git
-											&amp;Github
-										</span></li>
-									<li class="d-flex"><span>Programming:</span> <span>Python, C-language, JavaScript,
-											CSS
-										</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, Driving, Learning New
-											technologies
-										</span></li>
-
+								<ul class="about-info-list mt-4 px-md-0 px-1">
+									<li><span class="info-title">Profile:</span> <span class="info-val">BCA Student &amp; Aspiring Data Analyst</span></li>
+									<li><span class="info-title">Domain:</span> <span class="info-val">Data Analytics &amp; App Development</span></li>
+									<li><span class="info-title">Education:</span> <span class="info-val">Bachelor of Computer Applications</span></li>
+									<li><span class="info-title">Language:</span> <span class="info-val">English, Hindi</span></li>
+									<li><span class="info-title">BI Tools:</span> <span class="info-val">Microsoft Power BI, VS code, Git &amp; GitHub</span></li>
+									<li><span class="info-title">Programming:</span> <span class="info-val">Python, C-language, JavaScript, CSS</span></li>
+									<li><span class="info-title">Interest:</span> <span class="info-val">Traveling, Driving, Learning New technologies</span></li>
 								</ul>
 							</div>
 						</div>
@@ -711,8 +762,10 @@
 			</div>
 
 			<div class="row">
-				<h1 class="big-4">Experience</h1>
-				<div class="underline"></div>
+				<div class="col-12">
+					<h2 class="big-4">Experience</h2>
+					<div class="underline"></div>
+				</div>
 			</div>
 			<br>
 
@@ -768,8 +821,10 @@
 			<br>
 
 			<div class="row">
-				<h1 class="big-4">Education</h1>
-				<div class="underline"></div>
+				<div class="col-12">
+					<h2 class="big-4">Education</h2>
+					<div class="underline"></div>
+				</div>
 			</div>
 			<br>
 
@@ -798,8 +853,10 @@
 			<br>
 			<br>
 			<div class="row">
-				<h1 class="big-4">Achievements & Certifications</h1>
-				<div class="underline"></div>
+				<div class="col-12">
+					<h2 class="big-4">Achievements &amp; Certifications</h2>
+					<div class="underline"></div>
+				</div>
 			</div>
 			<br>
 
