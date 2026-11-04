@@ -41,7 +41,6 @@ Welcome to the official repository of my personal portfolio website! This projec
 - **📱 Fully Responsive Design:** Fluidly adapts to mobile screens, tablets, laptops, and ultra-wide desktop monitors.
 - **⚡ Typing Animation:** Interactive dynamic typing animation in the hero banner highlighting key roles.
 - **💬 Floating WhatsApp Widget:** Integrated custom quick-connect WhatsApp button with compact prompt bubble.
-- **🔔 Real-time Visitor Alerts:** Automated visitor notification dispatch with geolocation insights.
 - **📊 Interactive Skills & Metrics:** Visual animated progress bars for **Data Analytics**, Python, JavaScript, and Machine Learning.
 - **📜 Verified Credentials & Certificates:** Verified simulations and awards from **Deloitte** (Data Analytics), **BCG X** (Data for Decision Makers), and SRMU Techfest (Hackathon, CodeX, Cybersecurity).
 - **🎨 Dark & Electric Cyan Theme:** Sleek dark background paired with high-contrast accent colors for maximum readability.
@@ -81,10 +80,9 @@ Portfolio/
 ├── images/               # High-res profile photos, project & certificate assets
 ├── js/                   # Core JavaScript files & vendor plugins
 │   ├── main.js           # Main template logic, animations, & carousel config
-│   └── whatsapp-widget.js# Floating WhatsApp widget & visitor alerts logic
+│   └── whatsapp-widget.js# Floating WhatsApp quick-connect widget
 ├── lib/                  # External dependencies (Bootstrap, OwlCarousel, Animate)
 ├── scss/                 # Source SCSS files for custom themes & styling
-├── config.js             # Notification & environment configuration template
 ├── index.html            # Main portfolio webpage
 ├── .nojekyll             # Bypasses Jekyll for faster, seamless GitHub Pages deployment
 └── README.md             # Project documentation
